@@ -34,7 +34,7 @@ issue.labels.forEach(label => {
     icon.className = "fa-solid fa-bug";
   } else if (label.toLowerCase() === "help wanted") {
     icon = document.createElement("img");
-    icon.src = "assets/vector.png";
+    icon.src = "assets/Vector.png";
     icon.alt = "Help Wanted Icon";
     icon.className = "w-4 h-4";
   }
