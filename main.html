@@ -33,7 +33,7 @@
   <body class="bg-base-200">
     <!-- ! navbar -->
     <header>
-      <div class="p-6 flex justify-between border-b border-dotted sticky">
+      <div class="p-6 grid md:grid-cols-2 justify-between sm:grid sm:grid-cols-1 gap-3 border-b border-dotted sticky">
         <div class="flex items-center gap-3">
           <div class="w-[36px] h-[36px]">
             <img src="assets/github-logo.png" alt="" />
@@ -42,7 +42,7 @@
         </div>
 
         <!-- ? search and add button -->
-        <div class="flex gap-3">
+        <div class="flex gap-3 justify-end">
             <div>
                 <label class="input">
                   <svg
@@ -65,7 +65,7 @@
                 </label>
             </div>
             <div>
-                <button class="btn btn-primary"><i class="fa-solid fa-plus"></i>New Issues</button>
+                <button class="btn btn-primary md:text-[14px] lg:text-[14px] sm:text-[8px]"><i class="fa-solid fa-plus"></i>New Issues</button>
             </div>
         </div>
       </div>
@@ -73,7 +73,7 @@
 
     <!-- !tab buttons -->
 <section class="">
-    <div class="tabs mt-15 m-4 rounded-md p-4 pl-8 shadow bg-[#ffffff]">
+    <div class="tabs mt-15 m-4 rounded-md  p-8 shadow bg-[#ffffff]">
        
 <button class="tab btn mr-2 text-neutral active btn-primary text-white" data-status="all">All</button>
 <button class="tab btn mr-2  text-neutral" data-status="open">Open</button>
@@ -82,7 +82,7 @@
 </section>
 
 <!-- ! issues count -->
- <section class="flex justify-between p-6 m-4 bg-[#ffffff] rounded-md shadow">
+ <section class="grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 p-6 m-4 bg-[#ffffff] rounded-md shadow">
     <div class=" flex items-center gap-3">
 
         <div class=" bg-primary-content w-[50px] h-[50px] p-2 rounded-full">
@@ -95,13 +95,13 @@
             <p class="text-neutral/60">Track and manage your project issues </p>
         </div>
     </div>
-    <div class="flex items-center gap-2">
+    <div class="flex items-center lg:justify-end md:justif-end gap-2">
         <i class="fa-solid fa-circle text-[#00a96e] w-[12px] h-[12px]"></i>
-        <p class="font-bold text-xl">
+        <p class="font-bold text-lg">
             Open
         </p>
         <i class="fa-solid fa-circle text-[#A855F7] w-[12px] h-[12px]"></i>
-        <p class="font-bold text-xl">Closed</p>
+        <p class="font-bold text-lg">Closed</p>
     </div>
 
  </section>
@@ -117,7 +117,7 @@
 
 
     <h3 id="modalTitle" class="font-bold text-2xl mb-2"></h3>
-    <div class="flex items-center gap-6 mb-6">
+    <div class="flex lg:flex-row md:flex-row  items-center gap-6 mb-6">
       <span id="modalStatus" class="badge badge-success uppercase text-sm rounded-full"></span>
       <li id="modalAuthor" class="text-neutral/60"></li>
       <li id="modalDate" class="text-neutral/60"></li>
