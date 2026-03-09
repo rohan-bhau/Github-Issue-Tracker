@@ -32,31 +32,41 @@ const displayIssues = (issues) => {
 
     //? 2. created div element
 
-    const issueCard = document.createElement("div");
-    issueCard.innerHTML = `
-<div class="" >
+const issueCard = document.createElement("div");
+
+issueCard.innerHTML = `
 <div class="card bg-base-100 shadow-xl border-t-4
 ${issue.status === "open" ? "border-green-500" : "border-purple-500"}">
 
 <div class="card-body">
 
-<div class=" justify-between items-center ">
+<div class="justify-between items-center">
 
-<div class="badge 
+<div class="flex justify-between items-center gap-2">
+
+<img 
+src="${
+issue.priority === "high"
+? "assets/Open-Status.png"
+: issue.priority === "medium"
+? "assets/Open-Status.png"
+: "assets/Closed- Status .png"
+}"
+class="w-6 h-6"
+/>
+
+<div class="badge
 ${
-  issue.priority === "HIGH"
-    ? "badge-error"
-    : issue.priority === "MEDIUM"
-      ? "badge-warning"
-      : "badge-neutral"
+issue.priority === "high"
+? "badge-error"
+: issue.priority === "medium"
+? "badge-warning"
+: "bg-[#EEEFF2]"
 }">
-
-${issue.priority}
-
+${issue.priority.toUpperCase()}
 </div>
 
-
-
+</div>
 </div>
 
 <h2 class="card-title text-sm md:text-base">
@@ -87,10 +97,9 @@ ${issue.createdAt}
 
 </div>
 </div>
-</div>    
-
 `;
 
+//? append the newly created div into the issue container section
 container.appendChild(issueCard)
   });
 
