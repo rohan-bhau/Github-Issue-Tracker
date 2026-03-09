@@ -1,11 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Issue Tracker</title>
+    <!-- ? deisy ui-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- ? favicon -->
+    <link
+      rel="shortcut icon"
+      href="assets/github-logo.png"
+      type="image/x-icon"
+    />
+
+    <style>
+      * {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body class="max-w-screen-md w-[520px] mx-auto shadow-xl rounded-xl mt-20">
+    <div class="text-center items-center">
+      <div class="w-[100px] h-[100px] mx-auto pt-8 pb-6">
+        <img src="assets/github-logo.png" alt="" />
+      </div>
+      <div class="pt-12">
+        <h1 class="font-bold text-lg">GitHub Issues Tracker</h1>
+        <p class="text-neutral/50 text-sm">Sign in to manage your issues</p>
+      </div>
+      <!-- ?login form -->
+      <div class="p-8 items-center">
+        <fieldset class="fieldset rounded-box w-full">
+          <label class="label font-bold text-neutral">Username</label>
+          <input
+            type="text"
+            class="input rounded-md w-full"
+            id="username"
+            placeholder="Enter Username"
+          />
+          <label class="text-left font-sm text-primary">Default: admin</label>
+
+          <br />
+          <label class="label font-bold text-neutral">Password</label>
+          <input 
+            type="password"
+            class="input w-full rounded-md"
+            id="password"
+            placeholder="Password"
+          />
+          <label for="" class="text-left text-primary font-sm"
+            >Default: admin123</label
+          >
+
+          <button id="login-btn" class="btn btn-primary rounded-md mt-4 w-full">
+            Sign In
+          </button>
+        </fieldset>
+      </div>
+
+      <div class="pl-8 pr-8">
+        <div class="flex items-center gap-3">
+          <div class="flex-1 border-t border-gray-300"></div>
+          <span class="text-gray-500 text-sm font-medium">OR</span>
+          <div class="flex-1 border-t border-gray-300"></div>
+        </div>
+      </div>
+
+      <!-- ? Demo Credentials: -->
+      <div class="p-8">
+        <p class="pb-2">Demo Credentials:</p>
+        <div class="bg-base-200 rounded-xl pt-6 pb-6">
+          <h3 class="font-bold text-neutral">
+            UserName: <span class="font-normal">admin</span>
+          </h3>
+          <h3 class="font-bold text-neutral">
+            Password: <span class="font-normal">admin123</span>
+          </h3>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="js/login.js"></script>
+  </body>
 </html>
