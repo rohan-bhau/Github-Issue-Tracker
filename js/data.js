@@ -36,7 +36,7 @@ const displayIssues = (issues) => {
 const issueCard = document.createElement("div");
 
 issueCard.innerHTML = `
-<div class="card bg-base-100 shadow-xl border-t-4
+<div class="card bg-base-100 shadow-xl border-t-4 h-[100%]
 ${issue.status === "open" ? "border-green-500" : "border-purple-500"}">
 
 <div class="card-body">
@@ -80,9 +80,10 @@ ${issue.description}
 
 <div class="flex gap-2 mt-2">
 
-<span class="badge badge-outline badge-error">BUG</span>
+<span class="badge badge-outline badge-error bg-[#FECACA] font-bold"><i class="fa-solid fa-bug"></i>BUG</span>
 
-<span class="badge badge-outline badge-warning">HELP WANTED</span>
+
+<span class="badge badge-outline badge-warning bg-[#FDE68A] font-bold"><img src="assets/Vector.png" alt=""> HELP WANTED</span>
 
 </div>
 
@@ -99,13 +100,17 @@ ${issue.createdAt}
 </div>
 </div>
 `;
+const innerCard = issueCard.querySelector(".card");
+innerCard.addEventListener("click", () => openIssueModal(issue));
 
 //? 3. append the newly created div into the issue container section
 container.appendChild(issueCard)
+
   });
 
   //? 4. update issue count
 updateIssueCount(issues)
+
 };
 
 loadIssues();

@@ -107,11 +107,54 @@
  </section>
 
 <!-- ! issues container -->
-<section id="issues-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+<section id="issues-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
 </section>
+
+<!-- ! modal section -->
+
+<dialog id="issueModal" class="modal">
+  <div class="modal-box max-w-3xl rounded-lg">
+
+
+    <h3 id="modalTitle" class="font-bold text-2xl mb-2"></h3>
+    <div class="flex items-center gap-6 mb-6">
+      <span id="modalStatus" class="badge badge-success uppercase text-sm rounded-full"></span>
+      <li id="modalAuthor" class="text-neutral/60"></li>
+      <li id="modalDate" class="text-neutral/60"></li>
+    </div>
+
+    <!-- Labels -->
+    <div id="modalLabels" class="flex gap-2 mb-4"></div>
+
+    <!-- Description -->
+    <p id="modalDescription" class="mb-6 text-neutral/60 mb-6"></p>
+
+    <!-- Assignee and Priority -->
+     <div>
+      <div class="grid grid-cols-2 p-4 bg-[#f8fafc] rounded-xl">
+        <div>
+            <h2 class="text-neutral/70">Assignee:</h2>
+        <span id="modalAssignee" class="font-bold"></span>
+        </div>
+        <div>
+          <h2 class="text-neutral/70">Priority:</h2>
+          <span id="modalPriority" class="badge badge-error rounded-full uppercase px-3 py-1"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Close button -->
+    <div class="modal-action pt-6">
+      <button id="closeModalBtn" class="btn btn-primary outline-none">Close</button>
+    </div>
+
+  </div>
+</dialog>
+
 <script src="js/data.js"></script>
 <script src="js/tabs-functionality.js"></script>
 <script src="js/search.js"></script>
+<script src="js/modal.js"></script>
 <script src="js/updateIssueCount.js"></script>
   </body>
 </html>
