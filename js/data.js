@@ -23,6 +23,7 @@ async function loadIssues() {
 
 const displayIssues = (issues) => {
   // console.log(issues)
+  
   //? 1. get the issues container
   const container = document.getElementById("issues-container");
   container.innerHTML = "";
@@ -99,11 +100,12 @@ ${issue.createdAt}
 </div>
 `;
 
-//? append the newly created div into the issue container section
+//? 3. append the newly created div into the issue container section
 container.appendChild(issueCard)
   });
 
-
+  //? 4. update issue count
+updateIssueCount(issues)
 };
 
 loadIssues();
