@@ -30,7 +30,8 @@
       }
     </style>
   </head>
-  <body>
+  <body class="bg-base-200">
+    <!-- ! navbar -->
     <header>
       <div class="p-6 flex justify-between border-b border-dotted sticky">
         <div class="flex items-center gap-3">
@@ -69,5 +70,71 @@
         </div>
       </div>
     </header>
+
+    <!-- !tab buttons -->
+<section class="">
+    <div class="tabs mt-15 m-4 rounded-md p-4 pl-8 shadow bg-[#ffffff]">
+        <button class="tab btn mr-2">All</button>
+        <button class="tab btn mr-2">Open</button>
+        <button class="tab btn">Closed</button>
+    </div>
+</section>
+
+<!-- ! issues count -->
+ <section class="flex justify-between p-6 m-4 bg-[#ffffff] rounded-md shadow">
+    <div class=" flex items-center gap-3">
+
+        <div class=" bg-primary-content w-[50px] h-[50px] p-2 rounded-full">
+
+            <img src="assets/Aperture.png" alt="">
+        </div>
+
+        <div class="">
+            <h2 class=" font-bold text-xl"><span id="issueCount ">0</span> Issues</h2>
+            <p class="text-neutral/60">Track and manage your project issues </p>
+        </div>
+    </div>
+    <div class="flex items-center gap-2">
+        <i class="fa-solid fa-circle text-[#00a96e] w-[12px] h-[12px]"></i>
+        <p class="font-bold text-xl">
+            Open
+        </p>
+        <i class="fa-solid fa-circle text-[#A855F7] w-[12px] h-[12px]"></i>
+        <p class="font-bold text-xl">Closed</p>
+    </div>
+
+ </section>
+
+<!-- ! issues container -->
+<section id="issues-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+</section>
+    <!-- <div class="bg-[#ffffff] rounded-md shadow border-t-2 border-t-red ${issue.status}">
+
+  <div class="issue-top">
+      <span class="status-icon">●</span>
+      <span class="priority ${issue.priority.toLowerCase()}">
+          ${issue.priority}
+      </span>
+  </div>
+
+  <h3 class="issue-title">${issue.title}</h3>
+
+  <p class="issue-desc">
+      ${issue.description}
+  </p>
+
+  <div class="labels">
+      <span class="label bug">BUG</span>
+      <span class="label help">HELP WANTED</span>
+  </div>
+
+  <div class="issue-footer">
+      <p>#${issue.id} by ${issue.author}</p>
+      <p>${issue.createdAt}</p>
+  </div>
+
+</div> -->
+
+<script src="js/data.js"></script>
   </body>
 </html>
